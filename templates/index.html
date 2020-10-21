@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block section_css %}
+{% endblock %}
+
+
+{% block section %}
+
+<!-- Main body content -->
+<!---Handle side columns here -->
+<br/>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h2>CARD SYSTEM DEMO FOR A HOLOCAUST THEMED MUSEUM</h2>
+            <br/>
+
+            <h3>Summary</h3>
+            <p>This site simulates a card system in use on the Museum of Tolerance in Los Angeles (<a href = 'http://www.museumoftolerance.com'>http://www.museumoftolerance.com</a>) , for the exhibit on the Holocaust. Every visitor is given a card with the name and photo of a Jew child and as the visitor advances on the exhibit, putting the card on terminals with card readers, he/she is updated on the successive changes of the child history. At the end of the tour, the ultimate fate of the child is revealed.</p>
+            <p>This site allows to try how the system works, and its code on GitHub<strong>####PENDIENTE</strong> (free of rights) can help different Holocaust Museums worldwide to implement it (if authorized by the Museum of Tolerance). As a minimum, I will be contacting the Buenos Aires Holocaust Museum to let them know the availability of this demo and material.</p>
+            <p>This system was shown on the movie "Freedom writers" (2007). <a href = '{{film_fragment_on_gdrive}}'>The relevant fragment of this film can be seen here.</a></p>
+        </div>
+        
+        <div class="col-md-1"></div>
+
+        <div class="card col-md-3 mb-4 shadow-sm">
+            <a href="stage/{{child_for_demo}}"> 
+                <img src="{% static 'images/Cary Krell passport card.jpg' %}" alt="Cary Krell card" class="card-img-top mx-auto d-block"><br/>
+                <div class="card-body">
+                    <h4 class="card-text text-center"><strong>Click to simulate a card initial insertion to a terminal</strong></h4>
+                </div>
+            </a> 
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <h3>Introduction</h3>
+            <p>The Museum of Tolerance (a Simon Wiesenthal Center) located on Los Angeles, USA, has a card system that allows every person to follow the story of a Jew child along the visit to the Holocaust themed exhibit. </p>
+            <p>There is a seventy minute dramatic presentation that takes visitors back to the period between 1920s and 1945 in Nazi-dominated Europe.</p>
+            <p><strong>Each visitor receives a photo passport card with the story of a child living during the Holocaust.</strong></p>
+        </div>
+
+        <div class="col-md-1"></div>
+
+        <div class="card col-md-3 mb-4 shadow-sm">
+            
+                <img src="{% static 'images/Museum_of_Tolerance_Los_Angeles_USA.jpg' %}" alt="Museum of Tolerance, Los Angeles, USA" class="card-img-top mx-auto d-block"><br/>
+                <div class="card-body">
+                    <p class="card-text text-center">Museum of Tolerance</p>
+                </div> 
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            
+            <p><strong>As visitors explore different areas,</strong> such as a recreation of a Berlin Outdoor Café and a specially designed Hall of Testimony, <strong>the passport cards keep updating with the drastic changes in the children's lives.</strong></p>
+            <p><strong>At the end of the tour, the ultimate fate of the child is revealed.</strong></p>
+            <p>The texts (and the child photo) for Cary Krell, included as main example on this demo, were taken from the Tolerance Museum site (<a href='http://www.museumoftolerance.com/education/teacher-resources/holocaust-resources/children-of-the-holocaust/cary-krell.html'>http://www.museumoftolerance.com/education/teacher-resources/holocaust-resources/children-of-the-holocaust/cary-krell.html</a>).</p>
+            <p>Most photographs are taken from the "Freedom writers" film.</p>
+            <br/>
+
+            <h3>System description</h3>
+        </div>
+
+    <div class="card-deck">
+        <div class="card col-md-5 mb-4 shadow-sm bg-light justify-content-center">
+            <img src="{% static 'images/Hand_taking_a_card_from_pile.jpg' %}" alt="Hand taking a card from a pile" class="card-img-top mx-auto d-block"><br/>
+        </div>
+        <div class="card col-md-5 mb-4 shadow-sm bg-light justify-content-center">  
+            <img src="{% static 'images/Several_cards.jpg' %}" alt="Several cards" class="card-img-top mx-auto d-block"><br/>
+        </div>
+    </div>
+    <br/><br/>
+
+    <div class="row">
+        <div class="col-md-12">
+            <p>Every visitor takes a card from a cards pile. The card has the name and photo of a child.</p>
+            <p>At the beginning of the tour and at several moments during the visit to the exhibit, the visitor is routed to a room with a number of terminals with card readers.</p>
+        </div>
+    </div>
+
+    <div class="card-deck">
+        <div class="card col-md-5 mb-4 shadow-sm bg-light justify-content-center">
+            <img src="{% static 'images/A_row_of_terminals.jpg' %}" alt="A row of terminals" class="card-img-top mx-auto d-block"><br/>
+        </div>
+        <div class="card col-md-5 mb-4 shadow-sm bg-light justify-content-center">  
+            <img src="{% static 'images/Card_being_inserted_to_card_reader.jpg' %}" alt="A card being inserted to a card reader" class="card-img-top mx-auto d-block"><br/>
+        </div>
+    </div>
+        
+    <div class="row">
+        <div class="col-md-12">            
+            <p>Upon insertion of the card, the terminal shows details texts and photos related to the child. Each time the card is inserted, the next stage of the child life is presented, showing the impact on the child of what was seen on a stage of the exhibit.</p>
+            <p>At the end of the tour, the card is inserted for a last time (and maybe retained by the machine), and the final stage of the child life is shown, revealing whether he survived or not, and the complete story is printed on a nearby printer so the visitor can re-read in detail the story and take it with him.</p>
+        </div>
+    </div>
+
+    <div class="card-deck">
+        <div class="card col-md-4 mb-4 shadow-sm bg-light justify-content-center">
+            <img src="{% static 'images/Terminal_showing_child_information.jpg' %}" alt="A terminal showing child information" class="card-img-top mx-auto d-block"><br/>
+        </div>
+         <div class="card col-md-4 mb-4 shadow-sm bg-light justify-content-center">
+            <img src="{% static 'images/Terminal_printer_just_printed.jpg' %}" alt="A person reading the sheet just printed" class="card-img-top mx-auto d-block"><br/>
+        </div>
+        <div class="card col-md-4 mb-4 shadow-sm bg-light justify-content-center">  
+            <img src="{% static 'images/Sheet_of_paper_with_child_information_3_folded.jpg' %}" alt="A sheet of paper with the child information printed" class="card-img-top mx-auto d-block"><br/>
+        </div>
+    </div>
+    <br/><br/>
+
+    <div class="row">
+        <div class="col-md-12">  
+            <p>The terminals have no keyboard, mouse nor touchscreens. The card readers can be of any type: magnetic or optical (barcode readers like in a shop). The software required is any browser and a Internet connection (or just connection to a local server: a PC). The picture and text size on the templates must be adjusted beforehand to fit in a single screen on the actual terminal.</p>
+            <br/>
+
+            <h3>Technical information</h3>
+            <h4>Django 3.1 / Python 3.8 / Bootstrap 4.5 / Cloudinary</h4>
+            <h5>(focus on the back-end; front-end not polished)</h5>
+            <br/>
+            <ul>
+                <li><p>User-uploaded images (media) handled by Cloudinary. Static images handled by Whitenoise. 
+                </p>
+                <li><p>Secret keys based on environment variables for safe deployment.</p>
+                <li><p>Demo site implemented on Heroku with PostgreSQL DB and Cloudinary. 
+                </p>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,21 @@
+*.pyc
+*~
+#Always update actual venv name
+Pipfile*
+db.sqlite3
+.DS_Store
+#/static/cs: to git
+/static/images/
+/static/teach_images/
+/static/teach_thumbnails/
+media
+#Python Decouple library data files or Pipenv environmental variables:
+.env
+*.zip
+__pycache__/
+*.py[cod]
+node_modules
+.idea
+.vscode/
+\#*\#
+.\#*

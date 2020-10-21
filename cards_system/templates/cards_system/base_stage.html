@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block section_css %}
+        <!-- <link rel="stylesheet" href="{#% static 'css/blog.css' %#}"> -->
+        <link rel="stylesheet" href="{% static 'cards_system/css/cards_system.css' %}">
+{% endblock %}
+
+
+{% block section %}
+        <!-- Main body content -->
+        <!---Handle side columns here (future) -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                {% block content %}
+                {% endblock %}
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
+
