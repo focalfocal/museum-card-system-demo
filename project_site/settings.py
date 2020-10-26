@@ -18,7 +18,7 @@ import cloudinary.uploader
 import cloudinary.api
 
 def get_secret(setting):
-    """Get the secret variable fron environment variable or return explicit exception."""
+    """Get the secret variable fron environment variable or return EXPLICIT, CLEAR exception."""
     try:
         return os.environ[setting]
     except KeyError:
@@ -38,9 +38,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = get_secret('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 cloudinary.config( 
   cloud_name = get_secret('CLOUD_NAME'), 
@@ -141,7 +141,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-    '/var/www/static/',
+    BASE_DIR / "static",
 ]
+
+#the site will update the database/send cookie on every request
+SESSION_SAVE_EVERY_REQUEST = True

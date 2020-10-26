@@ -51,7 +51,8 @@ class Stage_content(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     created_date = models.DateTimeField(default=timezone.now)
     stage_number = models.IntegerField(verbose_name = "the stage number")
-    text = models.TextField(verbose_name='the stage text')
+    text = models.TextField(verbose_name='the stage Englishtext')
+    text_es = models.TextField(verbose_name='the stage Spanish text')
     image = CloudinaryField(   #photo for this stage content
         "Image",
         overwrite = True,
@@ -60,7 +61,8 @@ class Stage_content(models.Model):
         use_filename = True,
         blank=True
         )
-    image_text = models.TextField(verbose_name='the image accompanying text')
+    image_text = models.TextField(verbose_name='the image accompanying English text')
+    image_text_es = models.TextField(verbose_name='the image accompanying Spanish text')
 
     def __str__(self):
         return str(self.child) + " - stage #" + str(self.stage_number)

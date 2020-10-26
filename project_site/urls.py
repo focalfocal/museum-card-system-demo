@@ -23,5 +23,6 @@ import cards_system.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', cards_system.views.home, name='home'),
+    path('lang/<lang>', cards_system.views.set_language, name='set_language'),
     path('', include('cards_system.urls')),
 ]

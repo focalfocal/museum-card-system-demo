@@ -15,9 +15,11 @@ This system was shown on the movie "Freedom writers" (2007).
 ### Django 3.1 / Python 3.8 / Bootstrap 4.5 / Cloudinary
 (focus on the back-end; front-end not polished)
 
+    - Demo site implemented on Heroku with PostgreSQL DB and Cloudinary.
+
     - User-uploaded images (media) handled by Cloudinary. Static images handled by Whitenoise.
 
     - Secret keys based on environment variables for safe deployment.
 
-    - Demo site implemented on Heroku with PostgreSQL DB and Cloudinary.
+    - Bilingual website (English/Spanish)
 

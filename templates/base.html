@@ -21,8 +21,30 @@
         <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <!-- <a class="navbar-brand text-white" href="{#% url 'home' %#}">Start</a> -->
-                    <a class="navbar-brand text-white font-weight-bold" href="{% url 'home' %}">Start</a> 
+                    <a class="navbar-brand text-white font-weight-bold" href="{% url 'home' %}">
+                        {% if request.session.lang == "en" %}
+                            Start
+                        {% else %}
+                            Inicio
+                        {% endif %}
+                    </a> 
+                </li>
+            </ul>
+
+            <ul class="navbar-nav  ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white font-weight-bold" href="{% url 'set_language' lang='en' %}">
+                        <img src="{% static 'images/us.svg' %}" alt="US flag" width=60>
+                        English
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav  ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white font-weight-bold" href="{% url 'set_language' lang='es' %}">
+                        <img src="{% static 'images/sp.svg' %}" alt="Spanish flag" width=55>
+                        Español
+                    </a>
                 </li>
             </ul>
       
